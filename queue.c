@@ -22,8 +22,19 @@ Queue queue_new(void) {
 	return queue;
 }
 
-Queue queue_init(int elements[]) {
-	
+Queue queue_init(int elements[], int len) {
+	Queue queue = queue_new();
+
+	for (int i = 0; i < len; i++) {
+		QueueMaybeInt some = {
+			.is_some = true,
+			.value = elements[i],
+		};
+
+		queue.elements[i] = some;
+	}
+
+	return queue;
 }
 
 void queue_enqueue(Queue queue, int value) {
