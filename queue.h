@@ -9,6 +9,7 @@ typedef struct {
 
 typedef struct {
 	QueueMaybeInt _elements[QUEUE_MAX_SIZE];
+	int _len;
 } Queue;
 
 Queue queue_new(void);

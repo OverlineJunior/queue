@@ -9,10 +9,11 @@ typedef struct {
 
 typedef struct {
 	QueueMaybeInt _elements[QUEUE_MAX_SIZE];
+	int _len;
 } Queue;
 
 Queue queue_new(void) {
-	Queue queue;
+	Queue queue = { ._len = 0 };
 
 	for (int i = 0; i < QUEUE_MAX_SIZE; i++) {
 		QueueMaybeInt none = { .is_some = false };
