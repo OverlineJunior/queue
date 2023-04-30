@@ -1,0 +1,1 @@
+Implementation of a static queue for integers in C.
