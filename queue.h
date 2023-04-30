@@ -3,7 +3,12 @@
 #define QUEUE_MAX_SIZE 100
 
 typedef struct {
-	int elements[QUEUE_MAX_SIZE];
+	int value;
+	bool is_some;
+} QueueMaybeInt;
+
+typedef struct {
+	QueueMaybeInt elements[QUEUE_MAX_SIZE];
 } Queue;
 
 Queue queue_new(void);
