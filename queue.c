@@ -71,7 +71,7 @@ Queue queue_init(int elements[], int len) {
 }
 
 int queue_len(Queue queue) {
-	return 0;
+	return queue._len;
 }
 
 bool queue_is_empty(Queue queue) {
