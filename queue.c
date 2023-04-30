@@ -6,12 +6,12 @@ typedef struct {
 	int elements[QUEUE_MAX_SIZE];
 } Queue;
 
-Queue queue_new() {
+Queue queue_new(void) {
 	
 }
 
 Queue queue_init(int elements[]) {
-	
+
 }
 
 void queue_enqueue(Queue queue, int value) {
