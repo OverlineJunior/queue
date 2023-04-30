@@ -8,7 +8,7 @@ typedef struct {
 } QueueMaybeInt;
 
 typedef struct {
-	QueueMaybeInt elements[QUEUE_MAX_SIZE];
+	QueueMaybeInt _elements[QUEUE_MAX_SIZE];
 } Queue;
 
 Queue queue_new(void) {
@@ -16,7 +16,7 @@ Queue queue_new(void) {
 
 	for (int i = 0; i < QUEUE_MAX_SIZE; i++) {
 		QueueMaybeInt none = { .is_some = false };
-		queue.elements[i] = none;
+		queue._elements[i] = none;
 	}
 
 	return queue;
@@ -31,7 +31,7 @@ Queue queue_init(int elements[], int len) {
 			.value = elements[i],
 		};
 
-		queue.elements[i] = some;
+		queue._elements[i] = some;
 	}
 
 	return queue;
