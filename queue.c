@@ -84,6 +84,7 @@ QueueMaybeInt queue_dequeue(Queue* queue) {
 	QueueMaybeInt value = queue->_elements[0];
 
 	shift_queue(queue, queue_len(*queue));
+	queue->_len--;
 
 	return value;
 }

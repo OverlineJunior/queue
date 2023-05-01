@@ -14,4 +14,6 @@ int main(void) {
 
 	queue_dequeue(&queue);
 	printf("%i ", queue_peek_front(queue).value);
+
+	printf("len: %i ", queue_len(queue));
 }
