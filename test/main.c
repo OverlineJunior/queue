@@ -2,8 +2,16 @@
 #include "../queue.h"
 
 int main(void) {
-	Queue queue = queue_new();
-	queue_enqueue(&queue, 5);
-	queue_enqueue(&queue, 10);
-	printf("%i ", queue_peek_front(queue));
+	int elements[] = {5, 10, 15};
+	Queue queue = queue_init(elements, 3);
+	printf("%i ", queue_peek_front(queue).value);
+
+	queue_dequeue(&queue);
+	printf("%i ", queue_peek_front(queue).value);
+
+	queue_dequeue(&queue);
+	printf("%i ", queue_peek_front(queue).value);
+
+	queue_dequeue(&queue);
+	printf("%i ", queue_peek_front(queue).value);
 }

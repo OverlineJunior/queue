@@ -15,7 +15,7 @@ typedef struct {
 Queue queue_new(void);
 Queue queue_init(int elements[], int len);
 void queue_enqueue(Queue* queue, int value);
-int queue_dequeue(Queue queue);
+QueueMaybeInt queue_dequeue(Queue* queue);
 QueueMaybeInt queue_peek_front(Queue queue);
 int queue_len(Queue queue);
 bool queue_is_empty(Queue queue);
