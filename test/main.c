@@ -3,7 +3,7 @@
 
 int main(void) {
 	Queue queue = queue_new();
-	printf("%i ", queue_is_empty(queue));
 	queue_enqueue(&queue, 5);
-	printf("%i ", queue_is_empty(queue));
+	queue_enqueue(&queue, 10);
+	printf("%i ", queue_peek_front(queue));
 }

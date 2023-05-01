@@ -56,8 +56,8 @@ int queue_dequeue(Queue queue) {
 	return 0;
 }
 
-int queue_peek_front(Queue queue) {
-	return 0;
+QueueMaybeInt queue_peek_front(Queue queue) {
+	return queue._elements[0];
 }
 
 Queue queue_init(int elements[], int len) {
