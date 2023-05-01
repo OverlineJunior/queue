@@ -75,5 +75,5 @@ int queue_len(Queue queue) {
 }
 
 bool queue_is_empty(Queue queue) {
-	return false;
+	return queue_len(queue) == 0;
 }
