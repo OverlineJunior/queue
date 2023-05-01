@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <string.h>
 #include <stdbool.h>
 
 #define QUEUE_MAX_SIZE 100
@@ -97,4 +99,22 @@ Queue queue_init(int elements[], int len) {
 	}
 
 	return queue;
+}
+
+void queue_display(Queue queue) {
+	int len = queue_len(queue);
+
+	printf("<[");
+
+	for (int i = 0; i < len; i++) {
+		char el_text[16] = "%i";
+		
+		if (i < len - 1) {
+			strcat_s(el_text, 16, ", ");
+		}
+
+		printf(el_text, queue._elements[i].value);
+	}
+
+	printf("]\n");
 }

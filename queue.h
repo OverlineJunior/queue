@@ -19,3 +19,4 @@ QueueMaybeInt queue_dequeue(Queue* queue);
 QueueMaybeInt queue_peek_front(Queue queue);
 int queue_len(Queue queue);
 bool queue_is_empty(Queue queue);
+void queue_display(Queue queue);
